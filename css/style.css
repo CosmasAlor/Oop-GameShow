@@ -1,0 +1,89 @@
+
+img {
+    width: 100%;
+}
+
+
+
+footer {
+    background-color: #121212 !important;;
+    color: white;
+}
+
+.detail-box {
+    background-color: #121212 !important;;
+    position: fixed; /* Fixed position to cover the entire viewport */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure it's on top of other content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    overflow: hidden;
+}
+
+.head {
+    min-height: 35vh;
+    background-image: url(../images/wraper.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.btn-close {
+    position: absolute;
+    top: 20%;
+    right: 10%;
+}
+
+.lead {
+    font-size: 1rem !important;
+    padding-bottom: 20px;
+}
+
+
+body {
+    background-color: #121212 !important; /* Dark background color */
+    color: #e0e0e0 !important; /* Light text color for readability */
+}
+
+.header, .footer {
+    background-color: #1f1f1f !important; /* Slightly lighter dark color for header and footer */
+    color: #e0e0e0 !important; /* Light text color */
+}
+
+.card {
+    background-color: #1e1e1e !important; /* Dark background for cards */
+    color: #e0e0e0 !important; /* Light text color */
+    border: 1px solid #333 !important; /* Border to differentiate cards */
+}
+
+.button, .btn {
+    background-color: #007bff !important; /* Bright color for buttons to stand out */
+    color: #ffffff !important; /* White text on buttons */
+}
+
+.button:hover, .btn:hover {
+    background-color: #0056b3 !important; /* Slightly darker button color on hover */
+}
+
+/* Additional styles for other elements as needed */
+#navbar {
+    transition: background-color 0.5s ease, color 0.5s ease;
+    background-color: #ffffff !important;
+    border-radius: 20px;
+}
+
+#navbar.scrolled {
+    background-color: #303030 !important;
+    color: #ffffff !important;
+    border-radius: 20px;
+}
+
+#navbar.scrolled a {
+    color: #000000 !important;
+}
