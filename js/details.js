@@ -52,7 +52,7 @@ export function displayGameDetails(details) {
                 <p>Platform: <span class="badge badge-secondary bg-dark">${details.platform}</span></p>
                 <p>Status: <span class="badge badge-secondary bg-dark">${details.status}</span></p>
                 <div class="lead p-4">${truncatedDescription}</div>
-                <a href="${details.game_url}"><button class="btn btn-outline-warning">Show Game</button></a>
+                <a href="${details.game_url}" target="_blank"><button class="btn btn-outline-warning">Show Game</button></a>
                 
             </div>
         </div>

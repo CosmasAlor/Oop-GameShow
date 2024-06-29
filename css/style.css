@@ -1,27 +1,50 @@
+/* Import the font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --font-family: 'Roboto', sans-serif;
+    --dark-bg: #121212;
+    --light-text: #e0e0e0;
+    --card-bg: #1e1e1e;
+    --border-color: #333;
+    --button-bg: #007bff;
+    --button-hover-bg: #0056b3;
+    --navbar-bg: #ffffff;
+    --navbar-scrolled-bg: #303030;
+    --active-link-color: blue;
+    --box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.1); /* Light shadow */
+}
+
+body {
+    background-color: var(--dark-bg) !important;
+    color: var(--light-text) !important;
+    font-family: var(--font-family);
+}
 
 img {
     width: 100%;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
 }
 
-
-
-footer {
-    background-color: #121212 !important;;
-    color: white;
+footer,
+.header, 
+.footer {
+    background-color: var(--dark-bg) !important;
+    color: var(--light-text) !important;
 }
 
 .detail-box {
-    background-color: #121212 !important;;
-    position: fixed; /* Fixed position to cover the entire viewport */
+    background-color: var(--dark-bg) !important;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 1000; /* Ensure it's on top of other content */
+    z-index: 1000;
     display: flex;
     justify-content: center;
     align-items: center;
-   
     overflow: hidden;
 }
 
@@ -32,7 +55,6 @@ footer {
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 
 .btn-close {
     position: absolute;
@@ -45,45 +67,48 @@ footer {
     padding-bottom: 20px;
 }
 
-
-body {
-    background-color: #121212 !important; /* Dark background color */
-    color: #e0e0e0 !important; /* Light text color for readability */
-}
-
-.header, .footer {
-    background-color: #1f1f1f !important; /* Slightly lighter dark color for header and footer */
-    color: #e0e0e0 !important; /* Light text color */
-}
-
 .card {
-    background-color: #1e1e1e !important; /* Dark background for cards */
-    color: #e0e0e0 !important; /* Light text color */
-    border: 1px solid #333 !important; /* Border to differentiate cards */
+    background-color: var(--card-bg) !important;
+    color: var(--light-text) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+.card:hover {
+    transform: scale(1.015);
+    transition: transform 0.5s ease;
 }
 
 .button, .btn {
-    background-color: #007bff !important; /* Bright color for buttons to stand out */
-    color: #ffffff !important; /* White text on buttons */
+    background-color: var(--button-bg) !important;
+    color: #ffffff !important;
 }
 
 .button:hover, .btn:hover {
-    background-color: #0056b3 !important; /* Slightly darker button color on hover */
+    background-color: var(--button-hover-bg) !important;
 }
 
-/* Additional styles for other elements as needed */
 #navbar {
     transition: background-color 0.5s ease, color 0.5s ease;
-    background-color: #ffffff !important;
+    background-color: var(--navbar-bg) !important;
     border-radius: 20px;
 }
 
 #navbar.scrolled {
-    background-color: #303030 !important;
+    background-color: var(--navbar-scrolled-bg) !important;
     color: #ffffff !important;
     border-radius: 20px;
 }
 
 #navbar.scrolled a {
     color: #000000 !important;
+}
+
+.nav-link {
+    color: #000;
+    font-weight: 500;
+}
+
+.nav-link.active {
+    color: var(--active-link-color);
+    font-weight: 700;
 }

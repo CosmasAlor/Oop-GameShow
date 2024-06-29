@@ -28,12 +28,11 @@ export function displayGames(games) {
 
     displayContainer.innerHTML = cartoona;
 
-    // Add event listener to each Details button
     const detailButtons = document.querySelectorAll('.detail-btn');
     detailButtons.forEach(button => {
         button.addEventListener('click', function() {
             const gameId = this.closest('.card').querySelector('.game-id').value;
-            return gameId;  // Return the gameId to be used in details.js
+            return gameId;  
         });
     });
 }
